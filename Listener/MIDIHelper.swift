@@ -17,6 +17,7 @@ public class MIDIHelper {
     )
     
     let inputTag = "Listener"
+    private var keyStates = KeyboardState()
 
 
     public init() {
@@ -39,9 +40,11 @@ public class MIDIHelper {
     private func received(midiEvent: MIDIEvent) {
         switch midiEvent {
         case .noteOn(let payload):
-            print("Note On:", payload.note, payload.velocity, payload.channel)
+            //print("Note On:", payload.note, payload.velocity, payload.channel)
+            keyStates.setStatus(payload.note.number, status: true)
         case .noteOff(let payload):
-            print("Note Off:", payload.note, payload.velocity, payload.channel)
+            //print("Note Off:", payload.note, payload.velocity, payload.channel)
+            keyStates.setStatus(payload.note.number, status: false)
         case .cc(let payload):
             print("CC:", payload.controller, payload.value, payload.channel)
         case .programChange(let payload):
