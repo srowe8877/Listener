@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ListenerApp: App {
+    public var midiHelper = MIDIHelper()
     var body: some Scene {
         WindowGroup {
             ContentView()

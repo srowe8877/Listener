@@ -11,6 +11,8 @@
 		88E953152D08566300084225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E953142D08566300084225 /* ContentView.swift */; };
 		88E953172D08566500084225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E953162D08566500084225 /* Assets.xcassets */; };
 		88E9531A2D08566500084225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E953192D08566500084225 /* Preview Assets.xcassets */; };
+		88E953222D08574C00084225 /* MIDIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E953212D08574C00084225 /* MIDIHelper.swift */; };
+		88E9532A2D085D3400084225 /* MIDIKitIO in Frameworks */ = {isa = PBXBuildFile; productRef = 88E953292D085D3400084225 /* MIDIKitIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		88E953162D08566500084225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88E953192D08566500084225 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88E9531B2D08566500084225 /* Listener.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Listener.entitlements; sourceTree = "<group>"; };
+		88E953212D08574C00084225 /* MIDIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIHelper.swift; sourceTree = "<group>"; };
+		88E953272D085CAD00084225 /* MIDIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MIDIKit; path = ../MIDIKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E9532A2D085D3400084225 /* MIDIKitIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +41,10 @@
 		88E953062D08566300084225 = {
 			isa = PBXGroup;
 			children = (
+				88E953262D085CAD00084225 /* Packages */,
 				88E953112D08566300084225 /* Listener */,
 				88E953102D08566300084225 /* Products */,
+				88E953282D085D3400084225 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				88E953122D08566300084225 /* ListenerApp.swift */,
+				88E953212D08574C00084225 /* MIDIHelper.swift */,
 				88E953142D08566300084225 /* ContentView.swift */,
 				88E953162D08566500084225 /* Assets.xcassets */,
 				88E9531B2D08566500084225 /* Listener.entitlements */,
@@ -67,6 +75,21 @@
 				88E953192D08566500084225 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88E953262D085CAD00084225 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				88E953272D085CAD00084225 /* MIDIKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		88E953282D085D3400084225 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +108,9 @@
 			dependencies = (
 			);
 			name = Listener;
+			packageProductDependencies = (
+				88E953292D085D3400084225 /* MIDIKitIO */,
+			);
 			productName = Listener;
 			productReference = 88E9530F2D08566300084225 /* Listener.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E953222D08574C00084225 /* MIDIHelper.swift in Sources */,
 				88E953152D08566300084225 /* ContentView.swift in Sources */,
 				88E953132D08566300084225 /* ListenerApp.swift in Sources */,
 			);
@@ -336,6 +363,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88E953292D085D3400084225 /* MIDIKitIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MIDIKitIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88E953072D08566300084225 /* Project object */;
 }
