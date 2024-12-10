@@ -9,7 +9,7 @@ import Foundation
 import MIDIKitIO
 
 
-public class MIDIHelper {
+public class MIDIHelper: ObservableObject{
     private let midiManager = MIDIManager(
         clientName: "Listener",
         model: "Listener",
