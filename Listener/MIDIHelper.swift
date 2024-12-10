@@ -17,7 +17,7 @@ public class MIDIHelper: ObservableObject{
     )
     
     let inputTag = "Listener"
-    private var keyStates = KeyboardState()
+    var keyStates = KeyboardState()
 
 
     public init() {

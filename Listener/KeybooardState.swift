@@ -15,7 +15,7 @@ typealias MIDIStateArray = Array<Bool>
 
 struct KeyboardState {
     
-    private var keyState: MIDIStateArray = Array(repeating: false, count: 128)
+    public var keyState: MIDIStateArray = Array(repeating: false, count: 128)
     
     public var debugOut = true
     
