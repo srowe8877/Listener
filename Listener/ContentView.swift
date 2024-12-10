@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var midiHelper: MIDIHelper
+    
+    init(midiHelper: MIDIHelper) {
+        self.midiHelper = midiHelper
+    }
+    
+    
     var body: some View {
         VStack {
             Text("")
