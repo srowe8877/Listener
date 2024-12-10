@@ -14,6 +14,7 @@
 		88E953222D08574C00084225 /* MIDIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E953212D08574C00084225 /* MIDIHelper.swift */; };
 		88E9532A2D085D3400084225 /* MIDIKitIO in Frameworks */ = {isa = PBXBuildFile; productRef = 88E953292D085D3400084225 /* MIDIKitIO */; };
 		88E9532C2D08637000084225 /* KeybooardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E9532B2D08637000084225 /* KeybooardState.swift */; };
+		88E9532E2D08790000084225 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E9532D2D08790000084225 /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		88E953212D08574C00084225 /* MIDIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIHelper.swift; sourceTree = "<group>"; };
 		88E953272D085CAD00084225 /* MIDIKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MIDIKit; path = ../MIDIKit; sourceTree = "<group>"; };
 		88E9532B2D08637000084225 /* KeybooardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybooardState.swift; sourceTree = "<group>"; };
+		88E9532D2D08790000084225 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				88E953162D08566500084225 /* Assets.xcassets */,
 				88E9531B2D08566500084225 /* Listener.entitlements */,
 				88E953182D08566500084225 /* Preview Content */,
+				88E9532D2D08790000084225 /* ArrayExtensions.swift */,
 			);
 			path = Listener;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E9532C2D08637000084225 /* KeybooardState.swift in Sources */,
+				88E9532E2D08790000084225 /* ArrayExtensions.swift in Sources */,
 				88E953222D08574C00084225 /* MIDIHelper.swift in Sources */,
 				88E953152D08566300084225 /* ContentView.swift in Sources */,
 				88E953132D08566300084225 /* ListenerApp.swift in Sources */,
