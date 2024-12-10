@@ -9,20 +9,20 @@ import Foundation
 import MIDIKitIO
 
 typealias MIDINumber = UInt7
-typealias MIDINumberArray = Array<Bool>
+typealias MIDIStateArray = Array<Bool>
 
 
 
 struct KeyboardState {
     
-    private var keyState: Array<Bool> = Array(repeating: false, count: 128)
+    private var keyState: MIDIStateArray = Array(repeating: false, count: 128)
     
     public var debugOut = true
     
-    public func keyStatus(_ midinum: MIDINumber) -> Bool{
+    public func getStatus(_ midinum: MIDINumber) -> Bool{
         if midinum >= 0 {
             if debugOut {
-                print("Key \(midinum) set to \(keyState[Int(midinum)])")
+                print("Key \(midinum) status \(keyState[Int(midinum)])")
             }
             return keyState[Int(midinum)]
         }
@@ -33,7 +33,7 @@ struct KeyboardState {
     public mutating func setStatus(_ midinum: MIDINumber, status: Bool) {
         if midinum >= 0 {
             if debugOut {
-                print("Key \(midinum) was set to \(status)")
+                print("Key \(midinum) set to \(status)")
             }
             keyState[Int(midinum)] = status
         }

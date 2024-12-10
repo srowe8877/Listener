@@ -42,9 +42,11 @@ public class MIDIHelper {
         case .noteOn(let payload):
             //print("Note On:", payload.note, payload.velocity, payload.channel)
             keyStates.setStatus(payload.note.number, status: true)
+            print("Check status \(keyStates.getStatus(payload.note.number))")
         case .noteOff(let payload):
             //print("Note Off:", payload.note, payload.velocity, payload.channel)
             keyStates.setStatus(payload.note.number, status: false)
+            print("Check status \(keyStates.getStatus(payload.note.number))")
         case .cc(let payload):
             print("CC:", payload.controller, payload.value, payload.channel)
         case .programChange(let payload):
