@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var midiHelper: MIDIHelper
+    
+    
+    var midiHelper: MIDIHelper
+    @State var keyStates: KeyboardState
+    
     
     init(midiHelper: MIDIHelper) {
         self.midiHelper = midiHelper
+        keyStates = midiHelper.keyStates
     }
     
     
     var body: some View {
+        
         VStack {
-            Text("Still developing")
+            Text(keyStates.getOnOffStatusAll())
         }
-        .padding()
+        
     }
 }
 /*

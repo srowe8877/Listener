@@ -13,7 +13,7 @@ typealias MIDIStateArray = Array<Bool>
 
 
 
-struct KeyboardState {
+struct KeyboardState{
     
     public var keyState: MIDIStateArray = Array(repeating: false, count: 128)
     
@@ -28,6 +28,23 @@ struct KeyboardState {
         }
         print("Should never see this.")
         return false
+    }
+    public func getStatusString(_ midinum: MIDINumber) -> String {
+        return String( "Key \(midinum) \(keyState[Int(midinum)] )")
+    }
+    
+    public func getOnOffStatusAll() -> String {
+        var stringAll = ""
+        for note in keyState {
+            if note == true {
+                stringAll += "_"
+            }
+            else{
+                stringAll += "|"
+            }
+        }
+        return stringAll
+        
     }
     
     public mutating func setStatus(_ midinum: MIDINumber, status: Bool) {
