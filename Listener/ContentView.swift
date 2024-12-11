@@ -11,7 +11,7 @@ struct ContentView: View {
     
     
     var midiHelper: MIDIHelper
-    @State var keyStates: KeyboardState
+    @ObservedObject var keyStates: KeyboardState
     
     
     init(midiHelper: MIDIHelper) {
