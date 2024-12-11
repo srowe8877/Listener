@@ -17,6 +17,18 @@ import SwiftUI
 class KeyboardState: ObservableObject{
     
     @Published var keyState: MIDIStateArray = Array(repeating: false, count: 128)
+    var midinotes: Array<(String,Int)> = Array(repeating: ("C",-2), count: 128)
+    init(){
+        
+        var runningCount = 0
+        var name = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
+        for octave in -2..<8{
+            for index in 0..<12 {
+                midinotes[runningCount + index] = (name[index],octave)
+            }
+            runningCount += 12
+        }
+    }
     
     public var debugOut = true
     
@@ -33,6 +45,8 @@ class KeyboardState: ObservableObject{
     public func getStatusString(_ midinum: MIDINumber) -> String {
         return String( "Key \(midinum) \(keyState[Int(midinum)] )")
     }
+    
+    
     
     public func getOnOffStatusAll() -> String {
         var stringAll = ""

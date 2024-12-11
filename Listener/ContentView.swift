@@ -26,7 +26,7 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            Text(keyStates.getOnOffStatusAll()) // Try to get this to respond to changes in keyStates (aka--KeyboardState a member of MIDIHelper)
+            Text(keyStates.getOnOffStatusAll()) 
         }
         
         

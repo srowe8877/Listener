@@ -44,6 +44,7 @@ public class MIDIHelper: ObservableObject{
             keyStates.setStatus(payload.note.number, status: true)
             print("Check status \(keyStates.getStatus(payload.note.number))")
             print(keyStates.getOnOffStatusAll())
+            
         case .noteOff(let payload):
             //print("Note Off:", payload.note, payload.velocity, payload.channel)
             keyStates.setStatus(payload.note.number, status: false)
