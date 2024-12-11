@@ -17,6 +17,9 @@ struct ContentView: View {
     init(midiHelper: MIDIHelper) {
         self.midiHelper = midiHelper
         keyStates = midiHelper.keyStates
+        
+        
+        
     }
     
     
@@ -26,12 +29,6 @@ struct ContentView: View {
             Text(keyStates.getOnOffStatusAll())
         }
         
+        
     }
 }
-/*
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-*/

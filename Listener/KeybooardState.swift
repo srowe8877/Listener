@@ -10,10 +10,11 @@ import MIDIKitIO
 
 typealias MIDINumber = UInt7
 typealias MIDIStateArray = Array<Bool>
+import SwiftUI
 
 
 
-struct KeyboardState{
+struct KeyboardState: Equatable{
     
     public var keyState: MIDIStateArray = Array(repeating: false, count: 128)
     
