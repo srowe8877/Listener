@@ -14,9 +14,9 @@ import SwiftUI
 
 
 
-struct KeyboardState: Equatable{
+class KeyboardState: ObservableObject{
     
-    public var keyState: MIDIStateArray = Array(repeating: false, count: 128)
+    @Published var keyState: MIDIStateArray = Array(repeating: false, count: 128)
     
     public var debugOut = true
     
@@ -48,7 +48,7 @@ struct KeyboardState: Equatable{
         
     }
     
-    public mutating func setStatus(_ midinum: MIDINumber, status: Bool) {
+    public func setStatus(_ midinum: MIDINumber, status: Bool) {
         if midinum >= 0 {
             if debugOut {
                 print("Key \(midinum) set to \(status)")
