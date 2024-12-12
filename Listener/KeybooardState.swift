@@ -30,7 +30,7 @@ class KeyboardState: ObservableObject{
         }
     }
     
-    public var debugOut = true
+    public var debugOut = false
     
     public func getStatus(_ midinum: MIDINumber) -> Bool{
         if midinum >= 0 && midinum < 120{

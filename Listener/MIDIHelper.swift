@@ -41,18 +41,18 @@ public class MIDIHelper: ObservableObject{
         switch midiEvent {
             
         case .noteOn(let payload):
-            print("Note On:", payload.note, payload.velocity, payload.channel)
+            print("\nNote On:", payload.note, payload.velocity, payload.channel)
             print("Check status \(keyStates.getStatus(payload.note.number))")
             keyStates.setStatus(payload.note.number, status: true)
-            print("Check status \(keyStates.getStatus(payload.note.number))")
+            //print("Check status \(keyStates.getStatus(payload.note.number))")
             //print(keyStates.getOnOffStatusAll())
             print(keyStates.getStatusString(payload.note.number))
             
         case .noteOff(let payload):
-            print("Note Off:", payload.note, payload.velocity, payload.channel)
+            print("\nNote Off:", payload.note, payload.velocity, payload.channel)
             print("Check status \(keyStates.getStatus(payload.note.number))")
             keyStates.setStatus(payload.note.number, status: false)
-            print("Check status \(keyStates.getStatus(payload.note.number))")
+            //print("Check status \(keyStates.getStatus(payload.note.number))")
             //print(keyStates.getOnOffStatusAll())
             print(keyStates.getStatusString(payload.note.number))
             
