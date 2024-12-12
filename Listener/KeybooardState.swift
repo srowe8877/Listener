@@ -21,7 +21,7 @@ class KeyboardState: ObservableObject{
     init(){
         
         var runningCount = 0
-        var name = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
+        let name = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
         for octave in -2..<8{
             for index in 0..<12 {
                 midinotes[runningCount + index] = (name[index],octave)
@@ -33,19 +33,26 @@ class KeyboardState: ObservableObject{
     public var debugOut = true
     
     public func getStatus(_ midinum: MIDINumber) -> Bool{
-        if midinum >= 0 {
+        if midinum >= 0 && midinum < 120{
             if debugOut {
                 print("Key \(midinum) status \(keyState[Int(midinum)])")
             }
             return keyState[Int(midinum)]
+        } else{
+            print("Invalid Midinote \(midinum)")
         }
-        print("Should never see this.")
+        
         return false
     }
     public func getStatusString(_ midinum: MIDINumber) -> String {
-        var name = midinotes[Int(midinum)]
-        var string = name.0 + "\(name.1)"
-        return String( "Note \(string) Key \(midinum) \(keyState[Int(midinum)] )")
+        if midinum >= 0 && midinum < 120{
+            var name = midinotes[Int(midinum)]
+            var string = name.0 + "\(name.1)"
+            return String( "Note \(string) Key \(midinum) \(keyState[Int(midinum)] )")
+        }else {
+            print("Invalid midinote \(midinum)")
+        }
+        return "Invalid Midinote \(midinum)"
     }
     
     

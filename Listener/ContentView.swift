@@ -26,7 +26,8 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            Text(keyStates.getOnOffStatusAll()) 
+            Text(keyStates.getOnOffStatusAll())
+            //Text(keyStates.midinotes.debugDescription)
         }
         
         
