@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882AECCB2D0B561B001C4DA7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882AECCA2D0B561B001C4DA7 /* KeyboardView.swift */; };
 		88E953132D08566300084225 /* ListenerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E953122D08566300084225 /* ListenerApp.swift */; };
 		88E953152D08566300084225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E953142D08566300084225 /* ContentView.swift */; };
 		88E953172D08566500084225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E953162D08566500084225 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882AECCA2D0B561B001C4DA7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		88E9530F2D08566300084225 /* Listener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E953122D08566300084225 /* ListenerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerApp.swift; sourceTree = "<group>"; };
 		88E953142D08566300084225 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		88E953112D08566300084225 /* Listener */ = {
 			isa = PBXGroup;
 			children = (
+				882AECCA2D0B561B001C4DA7 /* KeyboardView.swift */,
 				88E953122D08566300084225 /* ListenerApp.swift */,
 				88E9532B2D08637000084225 /* KeybooardState.swift */,
 				88E953212D08574C00084225 /* MIDIHelper.swift */,
@@ -174,6 +177,7 @@
 				88E9532C2D08637000084225 /* KeybooardState.swift in Sources */,
 				88E9532E2D08790000084225 /* ArrayExtensions.swift in Sources */,
 				88E953222D08574C00084225 /* MIDIHelper.swift in Sources */,
+				882AECCB2D0B561B001C4DA7 /* KeyboardView.swift in Sources */,
 				88E953152D08566300084225 /* ContentView.swift in Sources */,
 				88E953132D08566300084225 /* ListenerApp.swift in Sources */,
 			);
