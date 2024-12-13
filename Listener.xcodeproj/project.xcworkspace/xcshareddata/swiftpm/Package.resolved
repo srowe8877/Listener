@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "timecodekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/TimecodeKit",
+      "state" : {
+        "revision" : "01006cd3d0555b4a38deea95d8f3c5c07c1e099b",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "xctestutils",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/XCTestUtils",
+      "state" : {
+        "revision" : "6bec67a47dbd43c757cdde43a24e71bc0dfcf7d6",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
