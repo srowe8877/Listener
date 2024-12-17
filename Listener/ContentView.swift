@@ -27,7 +27,7 @@ struct ContentView: View {
         
         VStack {
             Text(keyStates.getOnOffStatusAll())
-            
+            KeyboardView()
         }
         
         
